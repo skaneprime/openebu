@@ -25,8 +25,8 @@ app.all('/result4/', (req, res, next) => {
         'Access-Control-Allow-Headers': 'x-test,Content-Type,Accept,Access-Control-Allow-Headers',
         'Content-Type': 'application/json'    
     })
-    const data = { 'message': 'itmo336261', 'x-result': req.headers['x-test'], 'x-body': req.body };
-    console.log(data)
+    const data = { 'message': 'itmo336261', 'x-result': req.headers['x-test'] || null, 'x-body': req.body || null };
+    console.log('this is', data);
     res.send(JSON.stringify(data));
     next();
 });
