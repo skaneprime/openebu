@@ -18,7 +18,7 @@ app.get('/sample/', (req, res) => {
         'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'text/plain; charset=UTF-8'    })
-    res.send('function task(x) { return x * x }');
+    res.send('function task(x) { return x * x * x }');
 });
 
 app.all('/result4/', (req, res, next) => {
