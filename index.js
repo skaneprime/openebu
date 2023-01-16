@@ -17,6 +17,6 @@ app.get('/sample/', (req, res) => {
     res.send('function task(x) {\n\treturn x * x;\n}');
 });
 
-app.listen(process.env.PORT || 3030() => {
-  console.log(`server started on port ${PORT}`);
+app.listen(process.env.PORT || 3030, () => {
+  console.log(`server started on port ${process.env.PORT || 3030}`);
 });
