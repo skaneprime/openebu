@@ -17,4 +17,4 @@ app.get('/sample/', (req, res) => {
     res.send('function task(x) {\n\treturn x * x;\n}');
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3030);
