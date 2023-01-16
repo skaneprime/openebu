@@ -14,7 +14,7 @@ app.get('/sample/', (req, res) => {
         'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'text/plain; charset=UTF-8'    })
-    res.send('function task(x) {\n\treturn x * x;\n}');
+    res.send('function task(x) { return x * x }');
 });
 
 app.listen(process.env.PORT || 3030, () => {
