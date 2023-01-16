@@ -17,7 +17,7 @@ app.get('/sample/', (req, res) => {
     res.send('function task(x) { return x * x }');
 });
 
-app.get('/result4/', (req, res) => {
+app.all('/result4/', (req, res, next) => {
     res.set({
         'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
@@ -28,6 +28,7 @@ app.get('/result4/', (req, res) => {
     const data = { 'message': 'itmo336261', 'x-result': req.headers['x-test'], 'x-body': req.body };
     console.log(data)
     res.send(JSON.stringify(data));
+    next();
 });
 
 app.listen(process.env.PORT || 3030, () => {
