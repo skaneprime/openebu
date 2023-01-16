@@ -21,6 +21,8 @@ app.get('/result4/', (req, res) => {
     res.set({
         'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',
+        'Access-Control-Allow-Headers': 'x-test,Content-Type,Accept,Access-Control-Allow-Headers',
         'Content-Type': 'application/json'    
     })
     res.send(JSON.stringify({ 'message': 'itmo336261', 'x-result': req.headers['x-test'], 'x-body': req.body }));
