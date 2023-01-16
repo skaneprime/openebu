@@ -25,7 +25,9 @@ app.get('/result4/', (req, res) => {
         'Access-Control-Allow-Headers': 'x-test,Content-Type,Accept,Access-Control-Allow-Headers',
         'Content-Type': 'application/json'    
     })
-    res.send(JSON.stringify({ 'message': 'itmo336261', 'x-result': req.headers['x-test'], 'x-body': req.body }));
+    const data = { 'message': 'itmo336261', 'x-result': req.headers['x-test'], 'x-body': req.body };
+    console.log(data)
+    res.send(JSON.stringify(data));
 });
 
 app.listen(process.env.PORT || 3030, () => {
