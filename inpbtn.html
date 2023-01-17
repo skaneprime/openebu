@@ -7,7 +7,7 @@
     async function onClick() {
       const value = document.getElementById('inp').value
       const res = await fetch(value)
-      document.getElementById('inp').value = res.text()
+      document.getElementById('inp').value = await res.text()
     }
   </script>
 </head>
