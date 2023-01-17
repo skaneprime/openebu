@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>title</title>
+  <script>
+    async function onClick() {
+      const value = document.getElementById('inp').value
+      const res = await fetch(value)
+      document.getElementById('inp').value = res.text()
+    }
+  </script>
+</head>
+<body>
+	<input id="inp" />
+  <button id="bt" onclick="onClick">Best Button you'll see ever</button>
+</body>
+</html>
