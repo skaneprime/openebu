@@ -14,6 +14,11 @@ app.get('/login/', (req, res) => {
     res.send('itmo336261')
 });
 
+app.get('/testf/:id', (req, res) => {
+    console.log(1, req.params)
+    res.send('itmo336261')
+});
+
 app.get('/fetch/', (req, res) => {
     res.set({
         'X-Author': 'itmo336261',
