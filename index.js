@@ -21,6 +21,19 @@ app.get('/sample/', (req, res) => {
     res.send('function task(x) { return x * x * x }');
 });
 
+app.all('/promise/', (req, res) => {
+    res.set({
+        'X-Author': 'itmo336261',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'text/plain; charset=UTF-8'    
+    })
+    res.send(`
+        function task(x) { 
+            return new Promise((resolve, reject) => x < 18 ? resolve('yes') : reject('no')) 
+        }
+    `);
+});
+
 app.all('/result4/', (req, res, next) => {
     res.set({
         'Access-Control-Allow-Origin': '*',
