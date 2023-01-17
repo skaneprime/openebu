@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 app.use(express.json())
 app.use(express.text())
@@ -19,7 +20,7 @@ app.get('/fetch/', (req, res) => {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'text/html; charset=UTF-8'    
     })
-    res.sendFile('./inpbtn.html')
+    res.sendFile(path.join(__dirname, './inpbtn.html'))
 });
 
 app.get('/sample/', (req, res) => {
