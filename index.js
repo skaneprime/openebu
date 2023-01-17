@@ -13,7 +13,7 @@ app.get('/login/', (req, res) => {
     res.send('itmo336261')
 });
 
-app.get('/form/', (req, res) => {
+app.get('/fetch/', (req, res) => {
     res.set({
         'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
