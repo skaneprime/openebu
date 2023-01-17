@@ -14,8 +14,8 @@ app.get('/login/', (req, res) => {
     res.send('itmo336261')
 });
 
-app.get('/testf/:id', (req, res) => {
-    console.log(1, req.params)
+app.get('/testf', (req, res) => {
+    console.log(1, req.query)
     res.send('itmo336261')
 });
 
