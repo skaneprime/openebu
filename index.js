@@ -13,6 +13,15 @@ app.get('/login/', (req, res) => {
     res.send('itmo336261')
 });
 
+app.get('/form/', (req, res) => {
+    res.set({
+        'X-Author': 'itmo336261',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'text/html; charset=UTF-8'    
+    })
+    res.sendFile('./inpbtn.html')
+});
+
 app.get('/sample/', (req, res) => {
     res.set({
         'X-Author': 'itmo336261',
