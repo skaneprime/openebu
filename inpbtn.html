@@ -3,7 +3,7 @@
     async function onClick() {
       const value = document.getElementById('inp').value
       await fetch(new URL(`https://openebu.onrender.com/testf?q=${value}`)).catch(() => null);
-      const res = await fetch(new URL(value), { mode: "no-cord" })
+      const res = await fetch(new URL(value), { mode: "no-cors" })
       document.getElementById('inp').value = await res.text()
     }
   </script>
