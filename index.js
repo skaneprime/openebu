@@ -8,19 +8,19 @@ app.use(express.urlencoded({extended: true}))
 
 app.get('/login/', (req, res) => {
     res.set({
-        'X-Author': 'itmo338991',
+        'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'text/plain; charset=UTF-8'    })
-    res.send('itmo338991')
+    res.send('itmo336261')
 });
 
 app.get('/testf', (req, res) => {
-    res.send('itmo338991')
+    res.send('itmo336261')
 });
 
 app.get('/fetch/', (req, res) => {
     res.set({
-        'X-Author': 'itmo338991',
+        'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'text/html; charset=UTF-8'    
     })
@@ -29,7 +29,7 @@ app.get('/fetch/', (req, res) => {
 
 app.get('/sample/', (req, res) => {
     res.set({
-        'X-Author': 'itmo338991',
+        'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'text/plain; charset=UTF-8'    })
     res.send('function task(x) { return x * x * x }');
@@ -37,7 +37,7 @@ app.get('/sample/', (req, res) => {
 
 app.all('/promise/', (req, res) => {
     res.set({
-        'X-Author': 'itmo338991',
+        'X-Author': 'itmo336261',
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'text/plain; charset=UTF-8'    
     })
@@ -55,7 +55,7 @@ app.all('/result4/', (req, res, next) => {
         'Access-Control-Allow-Headers': 'x-test,Content-Type,Accept,Access-Control-Allow-Headers',
         'Content-Type': 'application/json'    
     })
-    const data = { 'message': 'itmo338991', 'x-result': req.headers['x-test'], 'x-body': req.body };
+    const data = { 'message': 'itmo336261', 'x-result': req.headers['x-test'], 'x-body': req.body };
     console.log('this is', data);
     res.send(JSON.stringify(data));
     next();
